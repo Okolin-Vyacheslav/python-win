@@ -1,8 +1,13 @@
-def exe_6(text):
-    my_text = []
-    for i in range(len(text)):
-        my_text.append(text[i][0:1].title() + text[i][1:])
-    return ' '.join(my_text)
+from itertools import count, cycle
+for el in count(int(input('Введите стартовое число: ' ))):
+    if el > 10:
+        break
+    print(el)
 
-
-print(exe_6(input('Введите текст: ').split()))
+my_list = [123, 'writing', 321, 'cfg']
+i = 0
+for el in cycle(my_list):
+   i += 1
+   if i > 100:
+       break
+   print(el)

@@ -1,18 +1,3 @@
-end_word = "$"
-summ = 0
-to_exit = False
-while not to_exit:
-    next_input = input('\n')
-    numbers = next_input.split()
-    for num in numbers:
-        if num == end_word:
-            to_exit = True
-            break
-        try:
-            num = int(num)
-        except ValueError:
-            continue
-
-        summ += num
-
-    print(f'Сумма - {summ}')
+from functools import reduce
+print([el for el in range(100, 1001) if el % 2 == 0])
+print(reduce(lambda x, y: x * y, [el for el in range(100, 1001) if el % 2 == 0]))
