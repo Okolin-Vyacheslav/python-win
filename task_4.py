@@ -1,5 +1,3 @@
-user_input = input('Введите предложение: ')
-user_input = user_input.split()
-
-for key, item in enumerate(user_input):
-    print(key + 1, item[0:11])
+my_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+new_list = [el for el in my_list if my_list.count(el) < 2]
+print(new_list)

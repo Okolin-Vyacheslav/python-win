@@ -1,9 +1,4 @@
-
-my_list = [1, 2, 3, 4, 5,]
-
-count = 0
-for i in range(int(len(my_list) / 2)):
-    my_list[count], my_list[count + 1] = my_list[count + 1], my_list[count]
-    count += 2
-
-print(my_list)
+my_list = [15, 2, 3, 1, 7, 5, 4, 10]
+new_list = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
+print(f'Исходный список {my_list}')
+print(f'Новый список {new_list}')
